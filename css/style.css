@@ -51,12 +51,24 @@ main {
 
 .logo {
   font-family: "AkiraExpanded-SuperBold", Verdana, sans-serif;
-  padding: 40px;
+  padding: 80px 0;
+  margin-bottom: 50px;
   text-align: center;
+  color: #fff;
+  text-shadow: 0 -1px rgba(0,0,0,.1);
+  -webkit-animation: pulsate 2s linear infinite;
+  animation: pulsate 2s linear infinite;
 }
 
+@-webkit-keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 8px #fff, 0 0 10px #fff; }
+ }
+ @keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 8px #fff, 0 0 10px #fff; }
+ }
+
 .logo > h1 {
-  font-size: 74px;
+  font-size: 94px;
   margin-bottom: 0;
 }
 
@@ -257,13 +269,13 @@ main {
   color: #ffffff86;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 690px) {
   .logo > h1 {
-    font-size: 36px;
+    font-size: 52px;
   }
 
   .logo > h2 {
-    font-size: 16px;
+    font-size: 32px;
   }
 
   .logo-text {
@@ -293,10 +305,10 @@ main {
 
 @media (max-width: 390px) {
   .logo > h1 {
-    font-size: 24px;
+    font-size: 34px;
   }
   .logo > h2 {
-    font-size: 12px;
+    font-size: 16px;
   }
   .phone {
     width: 30px;
