@@ -1,0 +1,320 @@
+@font-face {
+	font-family: 'AkiraExpanded-SuperBold';
+	src: url('../fonts/akiraexpanded-superbold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/akiraexpanded-superbold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/akiraexpanded-superbold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/akiraexpanded-superbold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/akiraexpanded-superbold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/akiraexpanded-superbold.svg#akiraexpanded-superbold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "Bookmanol";
+    src: url("../fonts/bookmanoldstyle.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  }
+
+@font-face {
+  font-family: 'AkiraExpanded';
+  src: url('../fonts/akiraexpanded-superbold.eot'); /* IE 9 Compatibility Mode */
+  src: url('../fonts/akiraexpanded-superbold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/akiraexpanded-superbold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/akiraexpanded-superbold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/akiraexpanded-superbold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/akiraexpanded-superbold.svg#akiraexpanded-superbold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+  * {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #000000;
+  color: #fff;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Bookmanol", Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 100%;
+  max-width: 820px;
+  min-height: 100vh;
+  margin: 0 auto;
+  z-index: 2;
+  padding: 10px;
+}
+
+.logo {
+  font-family: "AkiraExpanded-SuperBold", Verdana, sans-serif;
+  padding: 80px 0;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 -1px rgba(0,0,0,.1);
+  -webkit-animation: pulsate 2s linear infinite;
+  animation: pulsate 2s linear infinite;
+}
+
+@-webkit-keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 8px #fff, 0 0 10px #fff; }
+ }
+ @keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 8px #fff, 0 0 10px #fff; }
+ }
+
+.logo > h1 {
+  font-size: 94px;
+  margin-bottom: 0;
+}
+
+.logo > h2 {
+  margin: 0;
+}
+
+.info {
+  border-top: 1px solid white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.info > h5 {
+  margin: 40px 0;
+  line-height: 1.5;
+}
+
+.logo-text {
+  font-family: "AkiraExpanded-SuperBold", Verdana, sans-serif;
+  font-size: 20px;
+}
+
+.img_container > img {
+  width: 100%;
+}
+
+.list {
+  width: 100%;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.list > h3 {
+  text-align: center;
+  font-size: 32px;
+  padding: 20px;
+}
+
+.is-hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.is-hidden p {
+  font-size: 16px;
+	padding: 14px 60px;
+  line-height: 1.5;
+  margin: 0;
+}
+.summary {
+	font-size: 18px;
+	padding: 14px 60px;
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	font-weight: 400;
+}
+.summary:before {
+	/*-webkit-transform: translate(-50%,-50%) rotate(0);*/
+	transform: translate(-50%,-50%) rotate(-90deg);
+  will-change: translate,rotate;
+}
+.summary:after {
+	transform: translate(-50%,-50%);
+  will-change: translate,opacity;
+
+}
+.summary.open:before{ /* добавочный класс */
+  transform:translate(-50%,-50%) rotate(-0deg);
+  width:0;
+}
+.summary:after,
+.summary:before {
+	content: "";
+	width: 24px;
+	height: 4px;
+	border-radius: 4px;
+	background-color: #ffffff;
+	display: block;
+	position: absolute;
+	top: 50%;
+	transition: all .2s ease-in-out;
+	opacity: 1;
+	left: 21px;
+	contain: strict;
+}
+
+.menu-container {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.menu-slaider > h3 {
+  text-align: center;
+  font-size: 32px;
+  padding: 20px;
+  font-family: 'AkiraExpanded';
+}
+
+.footer {
+  max-width: 820px;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.cart {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn {
+  margin: 20px 0;
+  width: 100%;
+  display: inline-block; /* Строчно-блочный элемент */
+  background: #8c959d18; /* Серый цвет фона */
+  color: rgba(141, 145, 148, 0.699);
+  padding: 1rem 1.5rem; /* Поля вокруг текста */
+  text-decoration: none; /* Убираем подчёркивание */
+  border-radius: 3px; /* Скругляем уголки */
+ }
+
+.pin {
+  width: 20px;
+  filter: invert(50%);
+  color: rgba(141, 145, 148, 0.699);
+  transform: translateY(5px);
+  margin-right: 7px;
+ }
+
+.btn:hover {
+  color: #fff;
+ }
+
+.connection {
+  width: 100%;
+  font-size: 18px;
+	position: relative;
+	list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+ }
+
+.inst, .telg {
+  width: 30%;
+  margin: 40px auto;
+  display: block;
+ }
+
+.inst:hover, .telg:hover{
+  filter: invert(20%);
+ }
+
+.telef {
+  text-decoration: none;
+  color: #fff;
+}
+
+.telef:hover {
+  color: #ffffff54;
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.telef-footer {
+  margin: 20px 0;
+  width: 70%;
+  display: inline-block; /* Строчно-блочный элемент */
+  background: #ffffff; /* Серый цвет фона */
+  color: rgba(0, 0, 0, 0.699);
+  padding: 0 20px 20px 20px; /* Поля вокруг текста */
+  text-decoration: none; /* Убираем подчёркивание */
+  border-radius: 5px; /* Скругляем уголки */
+  text-align: center;
+  font-size: 24px; 
+}
+
+.phone {
+  width: 50px;
+  filter: invert(50%);
+  color: rgba(141, 145, 148, 0.911);
+  margin-right: 30px;
+  transform: translateY(15px);
+}
+
+.telef-footer:hover {
+  background: #ffffff44;
+  color: #ffffff86;
+}
+
+@media (max-width: 690px) {
+  .logo > h1 {
+    font-size: 52px;
+  }
+
+  .logo > h2 {
+    font-size: 32px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  .info {
+    font-size: 14px;
+  }
+
+  .list > h3 {
+    font-size: 18px;
+  }
+
+  .summary {
+    font-size: 16px;
+  }
+  .is-hidden p {
+    font-size: 14px;
+  }
+
+  .telef-footer {
+    font-size: 16px;
+    padding: 10px 0 40px 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .logo > h1 {
+    font-size: 34px;
+  }
+  .logo > h2 {
+    font-size: 16px;
+  }
+  .phone {
+    width: 30px;
+  }
+  .telef-footer {
+    font-size: 12px;
+    padding: 10px 0 30px 0;
+  }
+}
