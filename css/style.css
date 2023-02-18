@@ -235,7 +235,7 @@ main {
   margin: 20px 0;
   width: 70%;
   display: inline-block; /* Строчно-блочный элемент */
-  background: #dff7deb4; /* Серый цвет фона */
+  background: #ffffff; /* Серый цвет фона */
   color: rgba(0, 0, 0, 0.699);
   padding: 0 20px 20px 20px; /* Поля вокруг текста */
   text-decoration: none; /* Убираем подчёркивание */
@@ -253,7 +253,7 @@ main {
 }
 
 .telef-footer:hover {
-  background: #ffffff54;
+  background: #ffffff44;
   color: #ffffff86;
 }
 
